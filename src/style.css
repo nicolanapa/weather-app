@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+* {
+    font-family: "Roboto Flex", roboto, system-ui;
+    margin: 0;
+    padding: 0;
+}
+
+.form-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 2.5px solid rgb(247, 249, 255);
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background-color: rgb(240, 246, 234);
+}
+
+#city-input,
+#search-button {
+    border: 0;
+    border-radius: 20px;
+    background-color: rgb(255, 240, 209);
+    padding: 15px;
+    margin: 25px;
+}
+
+#search-button {
+    font-size: 15px;
+    font-weight: 800px;
+}
+
+.left-half {
+    width: 40%;
+    margin: 10px 30px 10px 5px;
+}

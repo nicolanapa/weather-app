@@ -26,14 +26,14 @@
 }
 
 #search-button {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 800px;
 }
 
 .left-half {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 20% 1fr;
     width: 40%;
     margin: 10px 30px 10px 5px;
 }
@@ -53,20 +53,23 @@
     background-color: rgb(255, 240, 209);
     border-radius: 20px;
     margin: 30px 5%;
-    padding: 25px 0 10px 15px;
+    padding: 25px 0 10px 18px;
 }
 
 .forecast-display > div > div {
     display: grid;
     grid-template-columns: 88px 0.5fr 3fr;
+    align-items: center;
     padding: 20px 10px;
 }
 
 .temp {
     display: flex;
-    align-items: flex-start;
-    margin: 5px 0 -10px -12px;
+    margin: 6px 0 -10px -12px;
 }
 
-.city {
+.gif {
+    justify-self: end;
+    margin-right: 20%;
+    border-radius: 20px;
 }

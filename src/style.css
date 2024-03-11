@@ -134,3 +134,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.bigger-gif {
+    display: grid;
+    max-height: 1000px;
+}
+
+.bigger-gif > img {
+    justify-self: center;
+    align-self: center;
+    margin-right: 0;
+    border-radius: 40px;
+}

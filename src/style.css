@@ -21,7 +21,7 @@
     border: 0;
     border-radius: 20px;
     background-color: rgb(255, 240, 209);
-    padding: 15px;
+    padding: 20px;
     margin: 25px;
 }
 
@@ -31,6 +31,42 @@
 }
 
 .left-half {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
     width: 40%;
     margin: 10px 30px 10px 5px;
+}
+
+.forecast-display {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 20px;
+    border: 2.5px solid rgb(247, 249, 255);
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background-color: rgb(240, 246, 234);
+}
+
+.forecast-display > div {
+    background-color: rgb(255, 240, 209);
+    border-radius: 20px;
+    margin: 30px 5%;
+    padding: 25px 0 10px 15px;
+}
+
+.forecast-display > div > div {
+    display: grid;
+    grid-template-columns: 88px 0.5fr 3fr;
+    padding: 20px 10px;
+}
+
+.temp {
+    display: flex;
+    align-items: flex-start;
+    margin: 5px 0 -10px -12px;
+}
+
+.city {
 }

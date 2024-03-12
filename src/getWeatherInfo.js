@@ -25,6 +25,11 @@ async function getCityInfo() {
     cityInfo = await cityInfo.json();
 
     console.log(cityInfo);
+    processCityInfo();
+}
+
+function processCityInfo() {
+    
 }
 
 export { cityInfo };

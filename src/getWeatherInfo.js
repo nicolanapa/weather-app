@@ -1,4 +1,5 @@
 import { weatherApi } from "./loginApi";
+import { changeCityInfo } from "./pushWeatherInfo";
 
 let searchedCity = "";
 let cityInfo = "";
@@ -23,8 +24,6 @@ function dateChecker() {
     todayDate = String(todayDate);
     return todayDate;
 }
-
-console.log(dateChecker());
 
 function searchCity() {
     let form = document.querySelector(".form-search");
@@ -57,29 +56,46 @@ function processCityInfo() {
         // [city name, city country]
         location: [cityInfo.location.name, cityInfo.location.country],
         // [current day, current weather conditin, current icon file, current temperature]
-        current: [dateChecker(), cityInfo.current.condition.text, cityInfo.current.condition.icon, cityInfo.temp_c],
+        current: [dateChecker(), cityInfo.current.condition.text, fromWebToLocalIcons2(), cityInfo.current.temp_c],
         next0: [
             // [date, weather condition, icon file, average temperature]
             cityInfo["forecast"]["forecastday"]["0"]["date"],
             cityInfo["forecast"]["forecastday"]["0"]["day"]["condition"]["text"],
-            cityInfo["forecast"]["forecastday"]["0"]["day"]["condition"]["icon"],
+            fromWebToLocalIcons(),
             cityInfo["forecast"]["forecastday"]["0"]["day"]["avgtemp_c"],
         ],
         next1: [
             cityInfo["forecast"]["forecastday"]["1"]["date"],
             cityInfo["forecast"]["forecastday"]["1"]["day"]["condition"]["text"],
-            cityInfo["forecast"]["forecastday"]["1"]["day"]["condition"]["icon"],
+            fromWebToLocalIcons(),
             cityInfo["forecast"]["forecastday"]["1"]["day"]["avgtemp_c"],
         ],
         next2: [
             cityInfo["forecast"]["forecastday"]["2"]["date"],
             cityInfo["forecast"]["forecastday"]["2"]["day"]["condition"]["text"],
-            cityInfo["forecast"]["forecastday"]["2"]["day"]["condition"]["icon"],
+            fromWebToLocalIcons(),
             cityInfo["forecast"]["forecastday"]["2"]["day"]["avgtemp_c"],
         ],
     };
 
+    function fromWebToLocalIcons() {
+        let strTemporary = cityInfo["forecast"]["forecastday"]["1"]["day"]["condition"]["icon"];
+        strTemporary = strTemporary.replace("//cdn.weatherapi.com/", "../src/");
+
+        return strTemporary;
+    }
+
+    function fromWebToLocalIcons2() {
+        let strTemporary = cityInfo.current.condition.icon;
+        strTemporary = strTemporary.replace("//cdn.weatherapi.com/", "../src/");
+
+        return strTemporary;
+    }
+
     console.log(cityInfoMinified);
+    console.table(cityInfoMinified);
+
+    changeCityInfo();
 }
 
-export { cityInfo };
+export { searchedCity, cityInfoMinified };

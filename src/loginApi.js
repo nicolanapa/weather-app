@@ -48,8 +48,8 @@ function loginCreator() {
         localStorage.setItem("weatherApi", weatherApi);
         localStorage.setItem("giphyApi", giphyApi);
 
-        console.log(weatherApi);
-        console.log(giphyApi);
+        //console.log(weatherApi);
+        //console.log(giphyApi);
 
         e.preventDefault();
     });
@@ -62,7 +62,7 @@ if (localStorage.getItem("weatherApi") === null || localStorage.getItem("giphyAp
 }
 
 console.log(
-    "Weather API and Giphy API: " + localStorage.getItem("weatherApi") + ", " + localStorage.getItem("giphyApi"),
+    //"Weather API and Giphy API: " + localStorage.getItem("weatherApi") + ", " + localStorage.getItem("giphyApi"),
 );
 
 export { weatherApi, giphyApi };

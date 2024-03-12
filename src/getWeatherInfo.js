@@ -1,4 +1,5 @@
 import { weatherApi } from "./loginApi";
+import { changeGif } from "./pushGiphyGif";
 import { changeCityInfo } from "./pushWeatherInfo";
 
 let searchedCity = "";
@@ -32,7 +33,7 @@ function searchCity() {
     form.addEventListener("submit", (e) => {
         searchedCity = inputCity.value;
 
-        console.log(searchedCity);
+        console.log("You searched: " + searchedCity);
         getCityInfo();
         e.preventDefault();
     });
@@ -46,7 +47,7 @@ async function getCityInfo() {
     );
     cityInfo = await cityInfo.json();
 
-    console.log(cityInfo);
+    //console.log(cityInfo);
     processCityInfo();
 }
 
@@ -96,6 +97,7 @@ function processCityInfo() {
     console.table(cityInfoMinified);
 
     changeCityInfo();
+    changeGif();
 }
 
 export { searchedCity, cityInfoMinified };

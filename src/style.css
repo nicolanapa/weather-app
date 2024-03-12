@@ -26,7 +26,7 @@ body {
     border-radius: 20px;
     background-color: rgb(255, 240, 209);
     padding: 22.5px;
-    margin: 25px;
+    margin: 25px 5px;
     font-weight: 500;
 }
 
@@ -34,7 +34,15 @@ body {
     display: flex;
     align-items: center;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 700;
+}
+
+.credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 25px 10px;
 }
 
 .left-half {

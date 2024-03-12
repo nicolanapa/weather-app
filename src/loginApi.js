@@ -61,8 +61,6 @@ if (localStorage.getItem("weatherApi") === null || localStorage.getItem("giphyAp
     console.log("Welcome!");
 }
 
-console.log(
-    //"Weather API and Giphy API: " + localStorage.getItem("weatherApi") + ", " + localStorage.getItem("giphyApi"),
-);
+//console.log("Weather API and Giphy API: " + localStorage.getItem("weatherApi") + ", " + localStorage.getItem("giphyApi"));
 
 export { weatherApi, giphyApi };

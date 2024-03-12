@@ -92,13 +92,14 @@ body {
     display: grid;
     grid-template-columns: 1.8fr 3fr;
     grid-template-rows: 1fr;
+    padding: 15px;
 }
 
 .right-half {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 40% 1fr;
-    margin: 10px 30px 10px 5px;
+    margin: 10px 0 10px 5px;
 }
 
 .current-0 {

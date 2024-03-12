@@ -41,7 +41,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 120px 1fr;
-    width: 80%;
     margin: 10px 30px 10px 5px;
 }
 
@@ -83,7 +82,7 @@ body {
 
 .website-container {
     display: grid;
-    grid-template-columns: 1.5fr 3fr;
+    grid-template-columns: 1.8fr 3fr;
     grid-template-rows: 1fr;
 }
 

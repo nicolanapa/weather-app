@@ -1,3 +1,5 @@
 import "./style.css";
 import "./loginStyle.css";
-import {} from "./loginApi";
+import { weatherApi, giphyApi } from "./loginApi";
+import {} from "./getWeatherInfo";
+import {} from "./getGiphyGif";

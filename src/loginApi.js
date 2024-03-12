@@ -1,3 +1,6 @@
+let weatherApi = localStorage.getItem("weatherApi");
+let giphyApi = localStorage.getItem("giphyApi");
+
 function loginCreator() {
     let mainContainer = document.querySelector(".website-container");
 
@@ -35,8 +38,29 @@ function loginCreator() {
     form.appendChild(inputGiphyApi);
 
     form.appendChild(button);
+
+    form.addEventListener("submit", (e) => {
+        dialog.open = "false";
+        dialog.close();
+        weatherApi = inputWeatherApi.value;
+        giphyApi = inputGiphyApi.value;
+
+        localStorage.setItem("weatherApi", weatherApi);
+        localStorage.setItem("giphyApi", giphyApi);
+
+        console.log(weatherApi);
+        console.log(giphyApi);
+
+        e.preventDefault();
+    });
 }
 
-loginCreator();
+if (localStorage.getItem("weatherApi") === null || localStorage.getItem("giphyApi") === null) {
+    loginCreator();
+} else {
+    console.log("Welcome!");
+}
 
-export {};
+console.log("Weather API and Giphy API: " + localStorage.getItem("weatherApi") + ", " + localStorage.getItem("giphyApi"));
+
+export { weatherApi, giphyApi };

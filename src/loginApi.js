@@ -3,6 +3,7 @@ function loginCreator() {
 
     let dialog = document.createElement("dialog");
     dialog.open = "true";
+    dialog.id = "dialogLogin";
     let form = document.createElement("form");
     form.method = "post";
     form.action = "#";

@@ -81,14 +81,14 @@ function processCityInfo() {
 
     function fromWebToLocalIcons() {
         let strTemporary = cityInfo["forecast"]["forecastday"]["1"]["day"]["condition"]["icon"];
-        strTemporary = strTemporary.replace("//cdn.weatherapi.com/", "../src/");
+        strTemporary = strTemporary.replace("//cdn.weatherapi.com/", "./");
 
         return strTemporary;
     }
 
     function fromWebToLocalIcons2() {
         let strTemporary = cityInfo.current.condition.icon;
-        strTemporary = strTemporary.replace("//cdn.weatherapi.com/", "../src/");
+        strTemporary = strTemporary.replace("//cdn.weatherapi.com/", "./");
 
         return strTemporary;
     }

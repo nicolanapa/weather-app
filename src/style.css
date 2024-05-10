@@ -14,7 +14,6 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    border: 2.5px solid rgb(185, 180, 199);
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
     background-color: rgb(92, 84, 112);
@@ -57,7 +56,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     padding: 20px;
-    border: 2.5px solid rgb(185, 180, 199);
     border-top-left-radius: 35px;
     border-bottom-left-radius: 35px;
     background-color: rgb(92, 84, 112);
@@ -107,7 +105,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    border: 2.5px solid rgb(185, 180, 199);
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
     background-color: rgb(92, 84, 112);
@@ -124,7 +121,6 @@ body {
     display: grid;
     grid-template-columns: 2fr 3fr;
     padding: 20px;
-    border: 2.5px solid rgb(185, 180, 199);
     background-color: rgb(92, 84, 112);
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
